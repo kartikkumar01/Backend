@@ -1,0 +1,17 @@
+session is the time when user came and goes from the website.
+
+Managing session means to know the user at each request he is using the website.
+
+session_start(); -> creates new session or fetch the existing session
+
+unset($_SESSION['loggedIn']); -> unset session variable
+
+session_unset(); -> unset all session variables
+session_destroy(); -> destroys the session
+
+echo session_id(); // Get session ID
+session_regenerate_id(true); // Generate new ID (recommended after login)
+
+If the user hasn’t made a server request for a long time, you consider them inactive and log them out.
+
+sessions expires either done explicitly using session_destroy or when user closes the browser.

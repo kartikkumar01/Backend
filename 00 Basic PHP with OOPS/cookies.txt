@@ -1,0 +1,11 @@
+setcookie(name, value, expire, path, domain, secure, httponly);
+expire -> time() + 3600
+path -> "/" (means access on all paths)
+domain -> "abc.com" (means to which domain cookies are accessible to)
+secure -> true (means cookies will go only with https request not http)
+httponly -> true (means cookie can be accessible with http requests only and false means the cookie is not accessible via JavaScript (like document.cookie).
+
+
+//session cookies
+setcookie('name', 'value');
+If we do not specify the expiry time , then it becomes a session cookie which will be destroyed once browser is closed.
